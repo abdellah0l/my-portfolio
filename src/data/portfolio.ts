@@ -58,7 +58,7 @@ export const projects: Project[] = [
     image: PortfolioProjectImage,
     stack: ['Next.js', 'Framer Motion', 'Tailwind CSS', 'Vite', 'TypeScript'],
     githubUrl: 'https://github.com/abdellah0l',
-    demoUrl: 'https://abdellahsh.space',
+    demoUrl: 'https://abdellahsp.space',
     featured: true,
   },
 ];
