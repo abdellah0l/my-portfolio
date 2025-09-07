@@ -88,7 +88,7 @@ const Journey = () => {
                 whileHover={{ scale: 1.05, y: -10 }}
                 className="group"
               >
-                <div className="relative overflow-hidden bg-card rounded-2xl shadow-medium hover:shadow-strong transition-all duration-500 border border-border/50 h-[420px]">
+                <div className="relative overflow-hidden bg-card rounded-2xl shadow-medium hover:shadow-strong transition-all duration-500 border border-border/50 h-[520px]">
                   {/* Rotating Images */}
                   <div className="relative h-48 overflow-hidden">
                     {(() => {

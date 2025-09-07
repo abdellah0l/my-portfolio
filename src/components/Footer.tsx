@@ -31,7 +31,7 @@ const Footer = () => {
         animate={{ x: ['-100%', '100%'] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}
       />
-      <div className="section-container section-padding relative z-10">
+      <div className="section-container section-padding relative z-10 mg-144">
         <motion.div
           variants={containerVariants}
           initial="hidden"
