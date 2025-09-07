@@ -56,7 +56,7 @@ const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     {project.featured && (
                       <div className="absolute top-4 left-4">

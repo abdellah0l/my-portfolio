@@ -6,17 +6,10 @@ import { useState, useEffect } from 'react';
 
 const Journey = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-  // Sample images for rotation (you can replace with actual images)
-  const sampleImages = [
-    '/placeholder.svg',
-    '/placeholder.svg', 
-    '/placeholder.svg'
-  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % sampleImages.length);
+      setCurrentImageIndex((prev) => prev + 1);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
@@ -87,7 +80,7 @@ const Journey = () => {
           </motion.div>
 
           {/* Blog Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-8xl mx-auto">
             {journeyEvents.map((event, index) => (
               <motion.div
                 key={event.id}
@@ -95,21 +88,29 @@ const Journey = () => {
                 whileHover={{ scale: 1.05, y: -10 }}
                 className="group"
               >
-                <div className="relative overflow-hidden bg-card rounded-2xl shadow-medium hover:shadow-strong transition-all duration-500 border border-border/50 h-full">
+                <div className="relative overflow-hidden bg-card rounded-2xl shadow-medium hover:shadow-strong transition-all duration-500 border border-border/50 h-[420px]">
                   {/* Rotating Images */}
                   <div className="relative h-48 overflow-hidden">
-                    <AnimatePresence mode="wait">
-                      <motion.img
-                        key={currentImageIndex}
-                        src={sampleImages[currentImageIndex]}
-                        alt={`${event.title} - Image ${currentImageIndex + 1}`}
-                        className="w-full h-full object-cover"
-                        initial={{ opacity: 0, scale: 1.1 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.9 }}
-                        transition={{ duration: 0.5 }}
-                      />
-                    </AnimatePresence>
+                    {(() => {
+                      const eventImages = (event.images && event.images.length > 0)
+                        ? event.images
+                        : ['/placeholder.svg'];
+                      const imgSrc = eventImages[currentImageIndex % eventImages.length];
+                      return (
+                        <AnimatePresence mode="wait">
+                          <motion.img
+                            key={`${event.id}-${currentImageIndex % eventImages.length}`}
+                            src={imgSrc}
+                            alt={`${event.title} - Image ${(currentImageIndex % eventImages.length) + 1}`}
+                            className="w-full h-full object-cover"
+                            initial={{ opacity: 0, scale: 1.1 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.5 }}
+                          />
+                        </AnimatePresence>
+                      );
+                    })()}
                     
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>

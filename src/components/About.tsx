@@ -29,7 +29,7 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-1xl mx-auto"
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
@@ -45,15 +45,14 @@ const About = () => {
             >
               <div className="relative mx-auto lg:mx-0 max-w-md">
                 <motion.div
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-muted to-accent shadow-strong"
                 >
                   <img
                     src={Image}
                     alt={personalInfo.name}
-                    className="w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-[400px] object-cover transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
                 </motion.div>
                 
                 {/* Floating Elements */}
@@ -103,14 +102,23 @@ const About = () => {
                     { src: "c/c-original.svg", alt: "C" },
                     { src: "python/python-original.svg", alt: "Python" },
                     { src: "javascript/javascript-original.svg", alt: "JavaScript" },
+                    { src: "typescript/typescript-original.svg", alt: "TypeScript" },
                     { src: "css3/css3-original.svg", alt: "CSS" },
                     { src: "html5/html5-original.svg", alt: "HTML" },
                     { src: "nodejs/nodejs-original.svg", alt: "NodeJS" },
                     { src: "react/react-original.svg", alt: "React" },
+                    { src: "nextjs/nextjs-original.svg", alt: "NextJS" },
                     { src: "vite/vite-original.svg", alt: "Vite" },
                     { src: "tailwindcss/tailwindcss-original.svg", alt: "TailwindCSS" },
                     { src: "express/express-original.svg", alt: "Express", extra: "bg-white rounded p-1" },
                     { src: "firebase/firebase-plain.svg", alt: "Firebase" },
+                    { src: "postgresql/postgresql-original.svg", alt: "PostgreSQL" },
+                    { src: "mongodb/mongodb-original.svg", alt: "MongoDB" },
+                    { src: "mysql/mysql-original.svg", alt: "MySQL" },
+                    { src: "php/php-original.svg", alt: "PHP" },
+                    { src: "java/java-original.svg", alt: "Java" },
+                    { src: "numpy/numpy-original.svg", alt: "NumPy" },
+                    { src: "pandas/pandas-original.svg", alt: "Pandas" },
                     { src: "git/git-original.svg", alt: "Git" },
                     { src: "github/github-original.svg", alt: "GitHub", extra: "bg-white rounded p-1" },
                     { src: "postman/postman-original.svg", alt: "Postman" },

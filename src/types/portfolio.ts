@@ -16,6 +16,7 @@ export interface JourneyEvent {
   description: string;
   type: 'education' | 'work' | 'achievement' | 'event';
   location?: string;
+  images?: string[];
 }
 
 export interface ContactFormData {
