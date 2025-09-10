@@ -148,4 +148,16 @@
   .divider-line {
     @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
   }
+  
+  /* Floating elements responsive sizing */
+  .floating-element {
+    @apply text-lg;
+  }
+  
+  @media (max-width: 768px) {
+    .floating-element {
+      font-size: 0.8em !important;
+      transform: scale(0.8);
+    }
+  }
 }

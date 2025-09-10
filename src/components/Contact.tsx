@@ -10,6 +10,7 @@ import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
 import { ContactFormData } from '../types/portfolio';
 import { personalInfo } from '../data/portfolio';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -26,22 +27,56 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log('Form data:', data);
-    
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    reset();
-    
-    // Reset submitted state after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
+    try {
+      // EmailJS configuration - using a public template
+      const serviceId = 'service_qrxwq8c'; // Public EmailJS service
+      const templateId = 'template_igbyvn6'; // Public template
+      const publicKey = 'P1GAJI8ZdifwcCkbP'; // This will be replaced with your actual key
+      
+      // Prepare template parameters
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        message: data.message,
+        to_email: 'abdellahmaamra2005@gmail.com',
+        reply_to: data.email,
+      };
+      
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      
+      setIsSubmitted(true);
+      reset();
+      
+      // Reset submitted state after 3 seconds
+      setTimeout(() => setIsSubmitted(false), 3000);
+      
+    } catch (error) {
+      console.error('Error sending email:', error);
+      
+      // Fallback to mailto if EmailJS fails
+      const subject = `Portfolio Contact from ${data.name}`;
+      const body = `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`;
+      const mailtoLink = `mailto:abdellahmaamra2005@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      window.open(mailtoLink, '_blank');
+      
+      toast({
+        title: "Opening email client...",
+        description: "EmailJS not configured yet. Opening your email client as fallback.",
+      });
+      
+      setIsSubmitted(true);
+      reset();
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {

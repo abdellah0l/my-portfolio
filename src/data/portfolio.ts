@@ -44,7 +44,7 @@ export const projects: Project[] = [
   {
     id: '3',
     title: 'My favorite characters',
-    description: 'A responsive weather dashboard that displays current conditions and forecasts using multiple weather APIs with beautiful data visualizations.',
+    description: 'A responsive website that displays my favorite characters',
     image: FavCharacterProjectImage,
     stack: ['React.js', 'TypeScript', 'Tailwind CSS', 'vite', 'shadcn', 'firebase'],
     githubUrl: 'https://github.com/abdellah0l/my-top-fav-characters-',
@@ -57,8 +57,8 @@ export const projects: Project[] = [
     description: 'A minimalist portfolio website showcasing projects and skills with smooth animations and responsive design.',
     image: PortfolioProjectImage,
     stack: ['Next.js', 'Framer Motion', 'Tailwind CSS', 'Vite', 'TypeScript'],
-    githubUrl: 'https://github.com/abdellah0l',
-    demoUrl: 'https://abdellahsp.space',
+    githubUrl: 'https://github.com/abdellah0l/my-portfolio',
+    demoUrl: 'https://www.abdellahsp.space',
     featured: true,
   },
 ];
