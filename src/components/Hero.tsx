@@ -1,33 +1,36 @@
-import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { Button } from './ui/button';
-import { personalInfo } from '../data/portfolio';
-import BlackSpiderman from '../data/assets/Black-Spiderman-removebg-preview.png';
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "./ui/button";
+import { personalInfo } from "../data/portfolio";
+import BlackSpiderman from "../data/assets/Black-Spiderman-removebg-preview.png";
 
 const Hero = () => {
   const handleScrollToProjects = () => {
-    const element = document.querySelector('#projects');
+    const element = document.querySelector("#projects");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleScrollToContact = () => {
-    const element = document.querySelector('#contact');
+    const element = document.querySelector("#contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center bg-gradient-to-b from-background to-muted/30">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center bg-gradient-to-b from-background to-muted/30"
+    >
       <div className="section-container section-padding w-full">
         <div className="grid lg:grid-cols-2 gap-10 items-center max-w-7xl mx-auto">
           {/* Left: Image sliding from left */}
           <motion.div
-            initial={{ x: '-120%', opacity: 0 }}
+            initial={{ x: "-120%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.9, ease: 'easeOut' }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
             className="relative order-2 lg:order-1"
           >
             <motion.div
@@ -47,9 +50,9 @@ const Hero = () => {
 
           {/* Right: Text sliding from right */}
           <motion.div
-            initial={{ x: '120%', opacity: 0 }}
+            initial={{ x: "120%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.9, ease: 'easeOut' }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
             className="order-1 lg:order-2 text-left"
           >
             {/* Greeting */}
@@ -89,8 +92,8 @@ const Hero = () => {
               transition={{ delay: 0.65, duration: 0.8 }}
               className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-8"
             >
-              I craft beautiful, user-centric digital experiences with modern web technologies.
-              Let's build something amazing together.
+              I craft beautiful, user-centric digital experiences with modern
+              web technologies. Let's build something amazing together.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -114,6 +117,16 @@ const Hero = () => {
                 className="text-lg px-8 py-6 font-semibold"
               >
                 Get In Touch
+              </Button>
+              <Button
+                asChild
+                variant="ghost"
+                size="lg"
+                className="text-lg px-8 py-6 font-semibold"
+              >
+                <a href="/resume.pdf" download="Abdellah_Resume.pdf">
+                  Download Resume
+                </a>
               </Button>
             </motion.div>
 
@@ -158,7 +171,9 @@ const Hero = () => {
               transition={{ delay: 1.2, duration: 0.8 }}
               className="hidden lg:flex flex-col items-start mt-10"
             >
-              <p className="text-sm text-muted-foreground mb-4">Scroll to explore</p>
+              <p className="text-sm text-muted-foreground mb-4">
+                Scroll to explore
+              </p>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
