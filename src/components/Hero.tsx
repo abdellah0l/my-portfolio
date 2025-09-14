@@ -124,7 +124,7 @@ const Hero = () => {
                 size="lg"
                 className="text-lg px-8 py-6 font-semibold"
               >
-                <a href="/resume.pdf" download="Abdellah_Resume.pdf">
+                <a href="/AbdellahMaamraResume.pdf" download="Abdellah_Resume.pdf">
                   Download Resume
                 </a>
               </Button>
