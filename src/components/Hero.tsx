@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center bg-gradient-to-b from-background to-muted/30"
+      className="min-h-screen flex items-center bg-gradient-to-b from-background to-muted/30 pt-16"
     >
       <div className="section-container section-padding w-full">
         <div className="grid lg:grid-cols-2 gap-10 items-center max-w-7xl mx-auto">
