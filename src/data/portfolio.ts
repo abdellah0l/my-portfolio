@@ -4,7 +4,7 @@ import EcommerceProjectImage from './assets/projects/ecommerce.png';
 import FavCharacterProjectImage from './assets/projects/fav.png';
 import PortfolioProjectImage from './assets/projects/portfolio.png';
 import ChessProjectImage from './assets/journey/chess/4f4b6d87-d837-4675-bb07-2034628619a9.jpeg';
-import ChessProjectImage2 from './assets/journey/chess/16958ae7-3e46-464f-b1fd-35b6c1f075c5.jpeg';
+import ChessProjectImage2 from './assets/journey/chess/553712670_3198688396968915_6831889268728024479_n.jpg';
 import ChessProjectImage3 from './assets/journey/chess/5830f5f1-8e68-487c-9761-f562cac7fda0.jpeg';
 import ConferenceProjectImage from './assets/journey/Conference/10fd3398-4bf8-46ea-913f-9382fcb57bb8.jpeg';
 import ConferenceProjectImage2 from './assets/journey/Conference/6f04c96d-1993-46e1-a6c8-afcc5bd35398.jpeg';
