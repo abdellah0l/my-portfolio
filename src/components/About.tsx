@@ -122,7 +122,9 @@ const About = () => {
                     { src: "git/git-original.svg", alt: "Git" },
                     { src: "github/github-original.svg", alt: "GitHub", extra: "bg-white rounded p-1" },
                     { src: "postman/postman-original.svg", alt: "Postman" },
-                    { src: "vscode/vscode-original.svg", alt: "VSCode" }
+                    // add drizzle and better-auth library too
+                    { customSrc: "https://api.iconify.design/logos:drizzle.svg", alt: "Drizzle ORM", extra: "bg-white rounded p-1" },
+                    { customSrc: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/lock.svg", alt: "Better Auth", extra: "bg-white rounded p-1" },
                   ].map((icon, i) => (
                     <motion.div
                       key={i}
@@ -133,7 +135,7 @@ const About = () => {
                       className="group w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
                     >
                       <img
-                        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon.src}`}
+                        src={icon.customSrc || `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon.src}`}
                         alt={icon.alt}
                         className={`w-8 h-8 sm:w-10 sm:h-10 grayscale group-hover:grayscale-0 transition  ${icon.extra || ""}`}
                       />

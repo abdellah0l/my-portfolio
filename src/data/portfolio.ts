@@ -97,12 +97,12 @@ export const personalInfo = {
   name: 'Abdellah Maamra',
   role: 'Full-stack Developer and junior Ai Engineer',
   bio: "Passionate Full-Stack Developer experienced in building user-centric, high-performance web applications. Specialized in React, TypeScript, and modern web technologies, with a strong focus on design, security, scalability, and optimization.",
-  email: 'abdellhamaamra2005@gmail.com',
+  email: 'abdellahmaamra2005@gmail.com',
   location: 'Algeris, Algeria',
   socials: {
     github: 'https://github.com/abdellah0l',
     linkedin: 'https://www.linkedin.com/in/abdellah-maamra-091b5229a/',
     instagram: 'https://instagram.com/must_raise0l',
-    discord: 'https://discord.com/users/1421831181556518964',
+    discord: 'https://discord.com/users/1018506703303610448',
   },
 };
