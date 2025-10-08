@@ -53,11 +53,19 @@ const Projects = () => {
                 <Card className="h-full overflow-hidden border-0 shadow-medium hover:shadow-strong transition-all duration-300 bg-card/80 backdrop-blur-sm">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div
+                        className="w-full h-48 bg-white transition-transform duration-300 group-hover:scale-105"
+                        aria-label={`${project.title} placeholder`}
+                        role="img"
+                      />
+                    )}
                     {project.featured && (
                       <div className="absolute top-4 left-4">
                         <Badge variant="secondary" className="flex items-center gap-1">

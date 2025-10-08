@@ -61,6 +61,16 @@ export const projects: Project[] = [
     demoUrl: 'https://www.abdellahsp.space',
     featured: true,
   },
+  {
+    id: '5',
+    title: 'BookHive',
+    description: 'Comming soon',
+    image: '',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Drizzle ORM', 'Better Auth', 'AI-powered'],
+    githubUrl: 'https://github.com/abdellah0l',
+    demoUrl: 'https://github.com/abdellah0l',
+    featured: true,
+  }
 ];
 
 export const journeyEvents: JourneyEvent[] = [

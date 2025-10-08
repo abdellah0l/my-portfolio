@@ -124,7 +124,6 @@ const About = () => {
                     { src: "postman/postman-original.svg", alt: "Postman" },
                     // add drizzle and better-auth library too
                     { customSrc: "https://api.iconify.design/logos:drizzle.svg", alt: "Drizzle ORM", extra: "bg-white rounded p-1" },
-                    { customSrc: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/lock.svg", alt: "Better Auth", extra: "bg-white rounded p-1" },
                   ].map((icon, i) => (
                     <motion.div
                       key={i}
