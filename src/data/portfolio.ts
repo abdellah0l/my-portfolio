@@ -23,6 +23,16 @@ export const navigationItems: NavigationItem[] = [
 export const projects: Project[] = [
   {
     id: '1',
+    title: 'BookHive',
+    description: 'Comming soon',
+    image: '',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Drizzle ORM', 'Better-Auth', 'AI-powered'],
+    githubUrl: 'https://github.com/abdellah0l/',
+    demoUrl: 'https://github.com/abdellah0l',
+    featured: true,
+  },
+  {
+    id: '2',
     title: 'E-Commerce MR Emballage',
     description: 'A modern, responsive e-commerce platform built with Next.js. Features include product catalog, shopping cart, and secure checkout. (still in development)',
     image: EcommerceProjectImage,
@@ -32,7 +42,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: '2',
+    id: '3',
     title: 'My Ai journey',
     description: 'A website that shares my journey to becoming an AI engineer',
     image: AiProjectImage,
@@ -42,7 +52,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: '3',
+    id: '4',
     title: 'My favorite characters',
     description: 'A responsive website that displays my favorite characters',
     image: FavCharacterProjectImage,
@@ -51,26 +61,6 @@ export const projects: Project[] = [
     demoUrl: 'https://top10favcharacters.web.app/',
     featured: true,
   },
-  {
-    id: '4',
-    title: 'Portfolio Website',
-    description: 'A minimalist portfolio website showcasing projects and skills with smooth animations and responsive design.',
-    image: PortfolioProjectImage,
-    stack: ['Next.js', 'Framer Motion', 'Tailwind CSS', 'Vite', 'TypeScript'],
-    githubUrl: 'https://github.com/abdellah0l/my-portfolio',
-    demoUrl: 'https://www.abdellahsp.space',
-    featured: true,
-  },
-  {
-    id: '5',
-    title: 'BookHive',
-    description: 'Comming soon',
-    image: '',
-    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Drizzle ORM', 'Better Auth', 'AI-powered'],
-    githubUrl: 'https://github.com/abdellah0l',
-    demoUrl: 'https://github.com/abdellah0l',
-    featured: true,
-  }
 ];
 
 export const journeyEvents: JourneyEvent[] = [

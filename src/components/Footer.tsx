@@ -40,7 +40,7 @@ const Footer = () => {
           className="max-w-6xl mx-auto"
         >
           {/* Main Footer Content */}
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8 mt-8">
             {/* Brand Section */}
             <motion.div variants={itemVariants} className="space-y-4">
               <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
