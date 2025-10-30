@@ -123,7 +123,8 @@ const About = () => {
                     { src: "github/github-original.svg", alt: "GitHub", extra: "bg-white rounded p-1" },
                     { src: "postman/postman-original.svg", alt: "Postman" },
                     { customSrc: "https://api.iconify.design/logos:drizzle.svg", alt: "Drizzle ORM", extra: "bg-white rounded p-1" },
-                    { src: "docker/docker-original.svg", alt: "Docker" }
+                    { src: "docker/docker-original.svg", alt: "Docker" },
+                    { customSrc: "https://raw.githubusercontent.com/better-auth/better-auth/e8babdce0a78b0e48d124bdc9312d6407b573098/docs/public/logo.png", alt: "Better-Auth", extra: "bg-white rounded p-1" },
                   ].map((icon, i) => (
                     <motion.div
                       key={i}
