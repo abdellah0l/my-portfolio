@@ -8,7 +8,6 @@ import fr from "./locales/fr.json";
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
-  .enableValue(false) // not needed for react as it escapes by default
   .init({
     resources: {
       en: {
