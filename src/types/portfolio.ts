@@ -1,7 +1,12 @@
+export interface LocalizedString {
+  en: string;
+  fr: string;
+}
+
 export interface Project {
   id: string;
   title: string;
-  description: string;
+  description: string | LocalizedString;
   image: string;
   stack: string[];
   githubUrl: string;
@@ -12,9 +17,9 @@ export interface Project {
 export interface JourneyEvent {
   id: string;
   date: string;
-  title: string;
-  description: string;
-  type: 'education' | 'work' | 'achievement' | 'event';
+  title: string | LocalizedString;
+  description: string | LocalizedString;
+  type: "education" | "work" | "achievement" | "event";
   location?: string;
   images?: string[];
 }

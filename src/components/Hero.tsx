@@ -3,8 +3,11 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { personalInfo } from "../data/portfolio";
 import BlackSpiderman from "../data/assets/Black-Spiderman-removebg-preview.png";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
+
   const handleScrollToProjects = () => {
     const element = document.querySelector("#projects");
     if (element) {
@@ -18,6 +21,11 @@ const Hero = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const resumeLink =
+    i18n.language === "fr"
+      ? "/fr/AbdellahMaamraResumeFr.pdf"
+      : "/en/AbdellahMaamraResumeEn.pdf";
 
   return (
     <section
@@ -43,7 +51,7 @@ const Hero = () => {
                 className="w-full h-auto object-contain drop-shadow-2xl"
               />
               <p className="mt-4 text-sm md:text-base text-muted-foreground text-center">
-                (fun fact : i love spidey)
+                {t("hero.funFact")}
               </p>
             </motion.div>
           </motion.div>
@@ -62,7 +70,7 @@ const Hero = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-muted-foreground text-lg md:text-xl mb-4"
             >
-              Hello, I'm
+              {t("hero.greeting")}
             </motion.p>
 
             {/* Name */}
@@ -82,7 +90,7 @@ const Hero = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-2xl md:text-3xl lg:text-4xl font-light text-muted-foreground mb-6"
             >
-              {personalInfo.role}
+              {t("hero.role")}
             </motion.h2>
 
             {/* Description */}
@@ -92,8 +100,7 @@ const Hero = () => {
               transition={{ delay: 0.65, duration: 0.8 }}
               className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-8"
             >
-              I craft beautiful, user-centric digital experiences with modern
-              web technologies. Let's build something amazing together.
+              {t("hero.description")}
             </motion.p>
 
             {/* CTA Buttons */}
@@ -108,7 +115,7 @@ const Hero = () => {
                 size="lg"
                 className="text-lg px-8 py-6 font-semibold"
               >
-                View My Work
+                {t("hero.viewWork")}
               </Button>
               <Button
                 onClick={handleScrollToContact}
@@ -116,7 +123,7 @@ const Hero = () => {
                 size="lg"
                 className="text-lg px-8 py-6 font-semibold"
               >
-                Get In Touch
+                {t("hero.getInTouch")}
               </Button>
               <Button
                 asChild
@@ -124,8 +131,8 @@ const Hero = () => {
                 size="lg"
                 className="text-lg px-8 py-6 font-semibold"
               >
-                <a href="/AbdellahMaamraResume.pdf" download="Abdellah_Resume.pdf">
-                  Download Resume
+                <a href={resumeLink} download="Abdellah_Resume.pdf">
+                  {t("hero.downloadResume")}
                 </a>
               </Button>
             </motion.div>
@@ -172,7 +179,7 @@ const Hero = () => {
               className="hidden lg:flex flex-col items-start mt-10"
             >
               <p className="text-sm text-muted-foreground mb-4">
-                Scroll to explore
+                {t("hero.scrollExplore")}
               </p>
               <motion.div
                 animate={{ y: [0, 10, 0] }}

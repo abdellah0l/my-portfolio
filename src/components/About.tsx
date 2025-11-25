@@ -1,10 +1,13 @@
-import { motion } from 'framer-motion';
-import { MapPin } from 'lucide-react';
-import { Button } from './ui/button';
-import { personalInfo } from '../data/portfolio';
-import  Image  from '../data/assets/me.jpg';
+import { motion } from "framer-motion";
+import { MapPin } from "lucide-react";
+import { Button } from "./ui/button";
+import { personalInfo } from "../data/portfolio";
+import Image from "../data/assets/me.jpg";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -33,16 +36,15 @@ const About = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t("about.title")}
+            </h2>
             <div className="divider-line max-w-24 mx-auto"></div>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Profile Image */}
-            <motion.div
-              variants={itemVariants}
-              className="relative"
-            >
+            <motion.div variants={itemVariants} className="relative">
               <div className="relative mx-auto lg:mx-0 max-w-md">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -54,7 +56,7 @@ const About = () => {
                     className="w-full h-[400px] object-cover transition-all duration-500"
                   />
                 </motion.div>
-                
+
                 {/* Floating Elements */}
                 <motion.div
                   animate={{ y: [-5, 5, -5] }}
@@ -73,10 +75,10 @@ const About = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  Passionate about creating digital experiences
+                  {t("about.subtitle")}
                 </h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  {personalInfo.bio}
+                  {t("about.bio")}
                 </p>
               </div>
 
@@ -89,7 +91,9 @@ const About = () => {
 
               {/* Skills/Technologies */}
               <div>
-                <h4 className="text-xl font-semibold mb-6">Technologies I work with</h4>
+                <h4 className="text-xl font-semibold mb-6">
+                  {t("about.technologies")}
+                </h4>
                 {/* Animated tech display - cool aesthetic */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -101,18 +105,34 @@ const About = () => {
                   {[
                     { src: "c/c-original.svg", alt: "C" },
                     { src: "python/python-original.svg", alt: "Python" },
-                    { src: "javascript/javascript-original.svg", alt: "JavaScript" },
-                    { src: "typescript/typescript-original.svg", alt: "TypeScript" },
+                    {
+                      src: "javascript/javascript-original.svg",
+                      alt: "JavaScript",
+                    },
+                    {
+                      src: "typescript/typescript-original.svg",
+                      alt: "TypeScript",
+                    },
                     { src: "css3/css3-original.svg", alt: "CSS" },
                     { src: "html5/html5-original.svg", alt: "HTML" },
                     { src: "nodejs/nodejs-original.svg", alt: "NodeJS" },
                     { src: "react/react-original.svg", alt: "React" },
                     { src: "nextjs/nextjs-original.svg", alt: "NextJS" },
                     { src: "vite/vite-original.svg", alt: "Vite" },
-                    { src: "tailwindcss/tailwindcss-original.svg", alt: "TailwindCSS" },
-                    { src: "express/express-original.svg", alt: "Express", extra: "bg-white rounded p-1" },
+                    {
+                      src: "tailwindcss/tailwindcss-original.svg",
+                      alt: "TailwindCSS",
+                    },
+                    {
+                      src: "express/express-original.svg",
+                      alt: "Express",
+                      extra: "bg-white rounded p-1",
+                    },
                     { src: "firebase/firebase-plain.svg", alt: "Firebase" },
-                    { src: "postgresql/postgresql-original.svg", alt: "PostgreSQL" },
+                    {
+                      src: "postgresql/postgresql-original.svg",
+                      alt: "PostgreSQL",
+                    },
                     { src: "mongodb/mongodb-original.svg", alt: "MongoDB" },
                     { src: "mysql/mysql-original.svg", alt: "MySQL" },
                     { src: "php/php-original.svg", alt: "PHP" },
@@ -120,11 +140,24 @@ const About = () => {
                     { src: "numpy/numpy-original.svg", alt: "NumPy" },
                     { src: "pandas/pandas-original.svg", alt: "Pandas" },
                     { src: "git/git-original.svg", alt: "Git" },
-                    { src: "github/github-original.svg", alt: "GitHub", extra: "bg-white rounded p-1" },
+                    {
+                      src: "github/github-original.svg",
+                      alt: "GitHub",
+                      extra: "bg-white rounded p-1",
+                    },
                     { src: "postman/postman-original.svg", alt: "Postman" },
-                    { customSrc: "https://api.iconify.design/logos:drizzle.svg", alt: "Drizzle ORM", extra: "bg-white rounded p-1" },
+                    {
+                      customSrc: "https://api.iconify.design/logos:drizzle.svg",
+                      alt: "Drizzle ORM",
+                      extra: "bg-white rounded p-1",
+                    },
                     { src: "docker/docker-original.svg", alt: "Docker" },
-                    { customSrc: "https://raw.githubusercontent.com/better-auth/better-auth/e8babdce0a78b0e48d124bdc9312d6407b573098/docs/public/logo.png", alt: "Better-Auth", extra: "bg-white rounded p-1" },
+                    {
+                      customSrc:
+                        "https://raw.githubusercontent.com/better-auth/better-auth/e8babdce0a78b0e48d124bdc9312d6407b573098/docs/public/logo.png",
+                      alt: "Better-Auth",
+                      extra: "bg-white rounded p-1",
+                    },
                   ].map((icon, i) => (
                     <motion.div
                       key={i}
@@ -135,15 +168,19 @@ const About = () => {
                       className="group w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
                     >
                       <img
-                        src={icon.customSrc || `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon.src}`}
+                        src={
+                          icon.customSrc ||
+                          `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon.src}`
+                        }
                         alt={icon.alt}
-                        className={`w-8 h-8 sm:w-10 sm:h-10 grayscale group-hover:grayscale-0 transition  ${icon.extra || ""}`}
+                        className={`w-8 h-8 sm:w-10 sm:h-10 grayscale group-hover:grayscale-0 transition  ${
+                          icon.extra || ""
+                        }`}
                       />
                     </motion.div>
                   ))}
                 </motion.div>
               </div>
-
             </motion.div>
           </div>
         </motion.div>

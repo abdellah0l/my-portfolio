@@ -1,11 +1,20 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, MapPin, Briefcase, GraduationCap, Award, Users } from 'lucide-react';
-import { journeyEvents } from '../data/portfolio';
-import { JourneyEvent } from '../types/portfolio';
-import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Calendar,
+  MapPin,
+  Briefcase,
+  GraduationCap,
+  Award,
+  Users,
+} from "lucide-react";
+import { journeyEvents } from "../data/portfolio";
+import { JourneyEvent } from "../types/portfolio";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Journey = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,34 +39,41 @@ const Journey = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
-  const getIcon = (type: JourneyEvent['type']) => {
+  const getIcon = (type: JourneyEvent["type"]) => {
     switch (type) {
-      case 'work':
+      case "work":
         return <Briefcase size={24} />;
-      case 'education':
+      case "education":
         return <GraduationCap size={24} />;
-      case 'achievement':
+      case "achievement":
         return <Award size={24} />;
-      case 'event':
+      case "event":
         return <Users size={24} />;
       default:
         return <Calendar size={24} />;
     }
   };
 
-  const getTypeColor = (type: JourneyEvent['type']) => {
+  const getTypeColor = (type: JourneyEvent["type"]) => {
     switch (type) {
-      case 'work':
-        return 'from-blue-500 to-blue-600';
-      case 'education':
-        return 'from-green-500 to-green-600';
-      case 'achievement':
-        return 'from-purple-500 to-purple-600';
-      case 'event':
-        return 'from-orange-500 to-orange-600';
+      case "work":
+        return "from-blue-500 to-blue-600";
+      case "education":
+        return "from-green-500 to-green-600";
+      case "achievement":
+        return "from-purple-500 to-purple-600";
+      case "event":
+        return "from-orange-500 to-orange-600";
       default:
-        return 'from-gray-500 to-gray-600';
+        return "from-gray-500 to-gray-600";
     }
+  };
+
+  const getLocalizedContent = (
+    content: string | { en: string; fr: string }
+  ) => {
+    if (typeof content === "string") return content;
+    return content[i18n.language] || content.en;
   };
 
   return (
@@ -71,10 +87,11 @@ const Journey = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">My Journey</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t("journey.title")}
+            </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-              A timeline of my professional growth, achievements, and key milestones 
-              that have shaped my career in software development.
+              {t("journey.subtitle")}
             </p>
             <div className="divider-line max-w-24 mx-auto"></div>
           </motion.div>
@@ -92,16 +109,22 @@ const Journey = () => {
                   {/* Rotating Images */}
                   <div className="relative h-48 overflow-hidden">
                     {(() => {
-                      const eventImages = (event.images && event.images.length > 0)
-                        ? event.images
-                        : ['/placeholder.svg'];
-                      const imgSrc = eventImages[currentImageIndex % eventImages.length];
+                      const eventImages =
+                        event.images && event.images.length > 0
+                          ? event.images
+                          : ["/placeholder.svg"];
+                      const imgSrc =
+                        eventImages[currentImageIndex % eventImages.length];
                       return (
                         <AnimatePresence mode="wait">
                           <motion.img
-                            key={`${event.id}-${currentImageIndex % eventImages.length}`}
+                            key={`${event.id}-${
+                              currentImageIndex % eventImages.length
+                            }`}
                             src={imgSrc}
-                            alt={`${event.title} - Image ${(currentImageIndex % eventImages.length) + 1}`}
+                            alt={`${getLocalizedContent(event.title)} - Image ${
+                              (currentImageIndex % eventImages.length) + 1
+                            }`}
                             className="w-full h-full object-cover"
                             initial={{ opacity: 0, scale: 1.1 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -111,18 +134,20 @@ const Journey = () => {
                         </AnimatePresence>
                       );
                     })()}
-                    
+
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
-                    
+
                     {/* Type Badge */}
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className={`absolute top-4 left-4 p-3 rounded-xl bg-gradient-to-r ${getTypeColor(event.type)} text-white shadow-medium`}
+                      className={`absolute top-4 left-4 p-3 rounded-xl bg-gradient-to-r ${getTypeColor(
+                        event.type
+                      )} text-white shadow-medium`}
                     >
                       {getIcon(event.type)}
                     </motion.div>
-                    
+
                     {/* Floating Elements */}
                     <motion.div
                       animate={{ y: [-5, 5, -5], rotate: [0, 5, 0] }}
@@ -141,7 +166,7 @@ const Journey = () => {
                     {/* Header */}
                     <div className="mb-4">
                       <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">
-                        {event.title}
+                        {getLocalizedContent(event.title)}
                       </h3>
                       <div className="flex items-center text-sm text-muted-foreground mb-2">
                         <Calendar size={16} className="mr-2" />
@@ -158,16 +183,15 @@ const Journey = () => {
 
                     {/* Description */}
                     <p className="text-muted-foreground leading-relaxed mb-6">
-                      {event.description}
+                      {getLocalizedContent(event.description)}
                     </p>
-
                   </div>
 
                   {/* Hover Effect */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"
-                    initial={{ x: '-100%' }}
-                    whileHover={{ x: '100%' }}
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "100%" }}
                     transition={{ duration: 0.6 }}
                   />
                 </div>

@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "Full-stack Developer and junior Ai Engineer",
+    "description": "I craft beautiful, user-centric digital experiences with modern web technologies. Let's build something amazing together.",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch",
+    "downloadResume": "Download Resume",
+    "scrollExplore": "Scroll to explore",
+    "funFact": "(fun fact : i love spidey)"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate about creating digital experiences",
+    "bio": "Passionate Full-Stack Developer experienced in building user-centric, high-performance web applications. Specialized in React, TypeScript, and modern web technologies, with a strong focus on design, security, scalability, and optimization.",
+    "technologies": "Technologies I work with"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A collection of projects that showcase my skills and passion for creating exceptional digital experiences.",
+    "viewAll": "View All Projects on GitHub",
+    "demo": "Demo",
+    "code": "Code",
+    "featured": "Featured"
+  },
+  "journey": {
+    "title": "My Journey",
+    "subtitle": "A timeline of my professional growth, achievements, and key milestones that have shaped my career in software development."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and design.",
+    "ctaTitle": "Let's start a conversation",
+    "ctaDescription": "Whether you have a project in mind, want to collaborate, or just want to say hello, I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.",
+    "connectTitle": "Connect with me",
+    "formTitle": "Send me a message",
+    "formDescription": "Fill out the form below and I'll get back to you as soon as possible.",
+    "nameLabel": "Name *",
+    "namePlaceholder": "Your full name",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "your.email@example.com",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Tell me about your project or just say hello...",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message Sent!",
+    "successTitle": "Message sent successfully!",
+    "successDesc": "Thank you for reaching out. I'll get back to you soon.",
+    "errorTitle": "Opening email client...",
+    "errorDesc": "EmailJS not configured yet. Opening your email client as fallback.",
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameLength": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Message is required",
+      "messageLength": "Message must be at least 10 characters"
+    }
+  },
+  "footer": {
+    "description": "Passionate developer creating digital experiences that make a difference.",
+    "quickLinks": "Quick Links",
+    "madeWith": "Made with",
+    "juice": "and lots of juice",
+    "backToTop": "Back to Top"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "journey": "Journey",
+    "contact": "Contact"
+  }
+}

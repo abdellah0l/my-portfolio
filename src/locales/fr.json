@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "role": "Développeur Full-stack et Ingénieur IA junior",
+    "description": "Je conçois des expériences numériques belles et centrées sur l'utilisateur avec des technologies web modernes. Construisons quelque chose d'incroyable ensemble.",
+    "viewWork": "Voir mon travail",
+    "getInTouch": "Me contacter",
+    "downloadResume": "Télécharger CV",
+    "scrollExplore": "Faites défiler pour explorer",
+    "funFact": "(fait amusant : j'adore spidey)"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Passionné par la création d'expériences numériques",
+    "bio": "Développeur Full-Stack passionné, expérimenté dans la création d'applications web performantes et centrées sur l'utilisateur. Spécialisé en React, TypeScript et les technologies web modernes, avec un fort accent sur le design, la sécurité, l'évolutivité et l'optimisation.",
+    "technologies": "Technologies avec lesquelles je travaille"
+  },
+  "projects": {
+    "title": "Projets en vedette",
+    "subtitle": "Une collection de projets qui mettent en valeur mes compétences et ma passion pour la création d'expériences numériques exceptionnelles.",
+    "viewAll": "Voir tous les projets sur GitHub",
+    "demo": "Démo",
+    "code": "Code",
+    "featured": "En vedette"
+  },
+  "journey": {
+    "title": "Mon Parcours",
+    "subtitle": "Une chronologie de ma croissance professionnelle, de mes réalisations et des étapes clés qui ont façonné ma carrière dans le développement logiciel."
+  },
+  "contact": {
+    "title": "Me contacter",
+    "subtitle": "Je suis toujours ouvert à discuter de nouvelles opportunités, de projets intéressants ou simplement à discuter de technologie et de design.",
+    "ctaTitle": "Commençons une conversation",
+    "ctaDescription": "Que vous ayez un projet en tête, que vous souhaitiez collaborer ou simplement dire bonjour, j'aimerais avoir de vos nouvelles. Envoyez-moi un message et je vous répondrai dès que possible.",
+    "connectTitle": "Connectez-vous avec moi",
+    "formTitle": "Envoyez-moi un message",
+    "formDescription": "Remplissez le formulaire ci-dessous et je vous répondrai dès que possible.",
+    "nameLabel": "Nom *",
+    "namePlaceholder": "Votre nom complet",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "votre.email@exemple.com",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Parlez-moi de votre projet ou dites simplement bonjour...",
+    "sendButton": "Envoyer le message",
+    "sending": "Envoi...",
+    "sent": "Message envoyé !",
+    "successTitle": "Message envoyé avec succès !",
+    "successDesc": "Merci de m'avoir contacté. Je reviendrai vers vous bientôt.",
+    "errorTitle": "Ouverture du client de messagerie...",
+    "errorDesc": "EmailJS n'est pas encore configuré. Ouverture de votre client de messagerie comme solution de repli.",
+    "validation": {
+      "nameRequired": "Le nom est requis",
+      "nameLength": "Le nom doit comporter au moins 2 caractères",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Veuillez entrer une adresse email valide",
+      "messageRequired": "Le message est requis",
+      "messageLength": "Le message doit comporter au moins 10 caractères"
+    }
+  },
+  "footer": {
+    "description": "Développeur passionné créant des expériences numériques qui font la différence.",
+    "quickLinks": "Liens rapides",
+    "madeWith": "Fait avec",
+    "juice": "et beaucoup de jus",
+    "backToTop": "Retour en haut"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "journey": "Parcours",
+    "contact": "Contact"
+  }
+}

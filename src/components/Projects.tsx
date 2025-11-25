@@ -1,11 +1,14 @@
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, Star } from 'lucide-react';
-import { Button } from './ui/button';
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
-import { Badge } from './ui/badge';
-import { projects } from '../data/portfolio';
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Star } from "lucide-react";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { projects } from "../data/portfolio";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t, i18n } = useTranslation();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -33,10 +36,11 @@ const Projects = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t("projects.title")}
+            </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-              A collection of projects that showcase my skills and passion for creating 
-              exceptional digital experiences.
+              {t("projects.subtitle")}
             </p>
             <div className="divider-line max-w-24 mx-auto"></div>
           </motion.div>
@@ -68,9 +72,12 @@ const Projects = () => {
                     )}
                     {project.featured && (
                       <div className="absolute top-4 left-4">
-                        <Badge variant="secondary" className="flex items-center gap-1">
+                        <Badge
+                          variant="secondary"
+                          className="flex items-center gap-1"
+                        >
                           <Star size={12} className="fill-current" />
-                          Featured
+                          {t("projects.featured")}
                         </Badge>
                       </div>
                     )}
@@ -85,17 +92,16 @@ const Projects = () => {
 
                   <CardContent className="pb-4">
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      {project.description}
+                      {typeof project.description === "string"
+                        ? project.description
+                        : (project.description as any)[i18n.language] ||
+                          project.description.en}
                     </p>
-                    
+
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="outline"
-                          className="text-xs"
-                        >
+                        <Badge key={tech} variant="outline" className="text-xs">
                           {tech}
                         </Badge>
                       ))}
@@ -114,22 +120,24 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Github size={16} className="mr-2 group-hover/btn:animate-pulse" />
-                        Code
+                        <Github
+                          size={16}
+                          className="mr-2 group-hover/btn:animate-pulse"
+                        />
+                        {t("projects.code")}
                       </a>
                     </Button>
-                    <Button
-                      size="sm"
-                      className="flex-1 group/btn"
-                      asChild
-                    >
+                    <Button size="sm" className="flex-1 group/btn" asChild>
                       <a
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <ExternalLink size={16} className="mr-2 group-hover/btn:animate-pulse" />
-                        Demo
+                        <ExternalLink
+                          size={16}
+                          className="mr-2 group-hover/btn:animate-pulse"
+                        />
+                        {t("projects.demo")}
                       </a>
                     </Button>
                   </CardFooter>
@@ -139,10 +147,7 @@ const Projects = () => {
           </div>
 
           {/* View More CTA */}
-          <motion.div
-            variants={itemVariants}
-            className="text-center mt-12"
-          >
+          <motion.div variants={itemVariants} className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
               <a
                 href="https://github.com/abdellah0l?tab=repositories"
@@ -151,7 +156,7 @@ const Projects = () => {
                 className="group"
               >
                 <Github size={20} className="mr-2 group-hover:animate-spin" />
-                View All Projects on GitHub
+                {t("projects.viewAll")}
               </a>
             </Button>
           </motion.div>
