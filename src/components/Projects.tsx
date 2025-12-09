@@ -94,7 +94,7 @@ const Projects = () => {
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       {typeof project.description === "string"
                         ? project.description
-                        : (project.description as any)[i18n.language] ||
+                        : (project.description)[i18n.language] ||
                           project.description.en}
                     </p>
 

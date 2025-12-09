@@ -99,10 +99,10 @@ const Contact = () => {
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="bg-card border border-border/50 rounded-2xl p-8 shadow-medium">
                 <h3 className="text-2xl font-bold mb-6">
-                  {t("contact.infoTitle")}
+                  {t("contact.ctaTitle")}
                 </h3>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  {t("contact.infoText")}
+                  {t("contact.ctaDescription")}
                 </p>
 
                 <div className="space-y-6">

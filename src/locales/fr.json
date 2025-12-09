@@ -6,8 +6,7 @@
     "viewWork": "Voir mon travail",
     "getInTouch": "Me contacter",
     "downloadResume": "Télécharger CV",
-    "scrollExplore": "Faites défiler pour explorer",
-    "funFact": "(fait amusant : j'adore spidey)"
+    "scrollExplore": "Faites défiler pour explorer"
   },
   "about": {
     "title": "À propos de moi",
@@ -32,9 +31,9 @@
     "subtitle": "Je suis toujours ouvert à discuter de nouvelles opportunités, de projets intéressants ou simplement à discuter de technologie et de design.",
     "ctaTitle": "Commençons une conversation",
     "ctaDescription": "Que vous ayez un projet en tête, que vous souhaitiez collaborer ou simplement dire bonjour, j'aimerais avoir de vos nouvelles. Envoyez-moi un message et je vous répondrai dès que possible.",
-    "connectTitle": "Connectez-vous avec moi",
+    "locationLabel": "Localisation",
+    "socialLabel": "Connectez-vous avec moi",
     "formTitle": "Envoyez-moi un message",
-    "formDescription": "Remplissez le formulaire ci-dessous et je vous répondrai dès que possible.",
     "nameLabel": "Nom *",
     "namePlaceholder": "Votre nom complet",
     "emailLabel": "Email *",
@@ -43,28 +42,28 @@
     "messagePlaceholder": "Parlez-moi de votre projet ou dites simplement bonjour...",
     "sendButton": "Envoyer le message",
     "sending": "Envoi...",
-    "sent": "Message envoyé !",
     "successTitle": "Message envoyé avec succès !",
-    "successDesc": "Merci de m'avoir contacté. Je reviendrai vers vous bientôt.",
-    "errorTitle": "Ouverture du client de messagerie...",
-    "errorDesc": "EmailJS n'est pas encore configuré. Ouverture de votre client de messagerie comme solution de repli.",
-    "validation": {
-      "nameRequired": "Le nom est requis",
-      "nameLength": "Le nom doit comporter au moins 2 caractères",
-      "emailRequired": "L'email est requis",
-      "emailInvalid": "Veuillez entrer une adresse email valide",
-      "messageRequired": "Le message est requis",
-      "messageLength": "Le message doit comporter au moins 10 caractères"
-    }
+    "successMessage": "Merci de m'avoir contacté. Je reviendrai vers vous bientôt.",
+    "fallbackTitle": "Ouverture du client de messagerie...",
+    "fallbackMessage": "EmailJS n'est pas encore configuré. Ouverture de votre client de messagerie comme solution de repli.",
+    "nameRequired": "Le nom est requis",
+    "nameLength": "Le nom doit comporter au moins 2 caractères",
+    "emailRequired": "L'email est requis",
+    "emailInvalid": "Veuillez entrer une adresse email valide",
+    "messageRequired": "Le message est requis",
+    "messageLength": "Le message doit comporter au moins 10 caractères"
   },
   "footer": {
     "description": "Développeur passionné créant des expériences numériques qui font la différence.",
     "quickLinks": "Liens rapides",
+    "connect": "Connecter",
+    "rights": "Tous droits réservés.",
+    "by": "par",
     "madeWith": "Fait avec",
-    "juice": "et beaucoup de jus",
-    "backToTop": "Retour en haut"
+    "juice": "et beaucoup de jus"
   },
   "navigation": {
+    "hero": "Héro",
     "home": "Accueil",
     "about": "À propos",
     "projects": "Projets",

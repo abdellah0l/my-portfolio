@@ -32,7 +32,7 @@ const Footer = () => {
               {personalInfo.name}
             </h3>
             <p className="text-muted-foreground max-w-xs">
-              {t("footer.brandText")}
+              {t("footer.description")}
             </p>
           </div>
 
@@ -104,7 +104,7 @@ const Footer = () => {
 
         <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm text-center md:text-left">
-            © {currentYear} {personalInfo.name}. {t("footer.rightsReserved")}
+            © {currentYear} {personalInfo.name}. {t("footer.rights")}
           </p>
 
           <div className="flex items-center text-sm text-muted-foreground">
@@ -114,7 +114,7 @@ const Footer = () => {
               className="mx-1 text-red-500 fill-red-500 animate-pulse"
             />
             <span>
-              {t("footer.by")} {personalInfo.name}
+              {t("footer.by")} {personalInfo.name} {t("footer.juice")}
             </span>
           </div>
 

@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
-import SpiderFavicon from "./data/assets/spider.png";
+import SpiderFavicon from "./data/assets/letter-a.png";
 
 // Ensure favicon uses the added asset
 const ensureFavicon = () => {

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { personalInfo } from "../data/portfolio";
-import BlackSpiderman from "../data/assets/Black-Spiderman-removebg-preview.png";
+import Toji from "../data/assets/TOJIII.png";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
@@ -46,13 +46,10 @@ const Hero = () => {
               className="relative mx-auto lg:mx-0 max-w-lg lg:max-w-xl xl:max-w-2xl"
             >
               <img
-                src={BlackSpiderman}
+                src={Toji}
                 alt="Black Spider-Man"
                 className="w-full h-auto object-contain drop-shadow-2xl"
               />
-              <p className="mt-4 text-sm md:text-base text-muted-foreground text-center">
-                {t("hero.funFact")}
-              </p>
             </motion.div>
           </motion.div>
 
