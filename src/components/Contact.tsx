@@ -26,15 +26,27 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace these with your actual EmailJS service, template, and public key
-      // For now we'll simulate a success response or fallback to mailto
-      const serviceId = "service_portfolio";
-      const templateId = "template_portfolio";
-      const publicKey = "YOUR_PUBLIC_KEY";
+      const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
-      // Check if env vars are set (in a real app)
-      // For this demo, we'll simulate a delay and success
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      if (!serviceId || !templateId || !publicKey) {
+        console.error("EmailJS env vars missing");
+        throw new Error("Configuration missing");
+      }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+          to_name: personalInfo.name,
+          reply_to: data.email,
+        },
+        publicKey
+      );
 
       toast({
         title: t("contact.successTitle"),
