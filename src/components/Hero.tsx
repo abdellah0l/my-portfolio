@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { personalInfo } from "../data/portfolio";
-import Toji from "../data/assets/TOJIII.png";
+import Ichigo from "../data/assets/ichigo.png";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
@@ -46,7 +46,7 @@ const Hero = () => {
               className="relative mx-auto lg:mx-0 max-w-lg lg:max-w-xl xl:max-w-2xl"
             >
               <img
-                src={Toji}
+                src={Ichigo}
                 alt="Black Spider-Man"
                 className="w-full h-auto object-contain drop-shadow-2xl"
               />
