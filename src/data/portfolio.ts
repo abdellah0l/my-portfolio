@@ -1,4 +1,5 @@
 import { Project, JourneyEvent, NavigationItem } from "../types/portfolio";
+import bookhiveImage from "./assets/projects/bookhive.png";
 import AiProjectImage from "./assets/projects/AI.png";
 import EcommerceProjectImage from "./assets/projects/ecommerce.png";
 import FavCharacterProjectImage from "./assets/projects/fav.png";
@@ -22,10 +23,10 @@ export const projects: Project[] = [
     id: "1",
     title: "BookHive",
     description: {
-      en: "Comming soon",
-      fr: "Bientôt disponible",
+      en: "still in development",
+      fr: "en cours de développement",
     },
-    image: "",
+    image: bookhiveImage,
     stack: [
       "Next.js",
       "TypeScript",
@@ -35,7 +36,7 @@ export const projects: Project[] = [
       "AI-powered",
     ],
     githubUrl: "https://github.com/abdellah0l/",
-    demoUrl: "https://github.com/abdellah0l",
+    demoUrl: "https://bookhive-three.vercel.app/",
     featured: true,
   },
   {
