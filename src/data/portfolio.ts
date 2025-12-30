@@ -26,7 +26,7 @@ export const projects: Project[] = [
       en: "still in development",
       fr: "en cours de développement",
     },
-    image: bookhiveImage,
+    image: "",
     stack: [
       "Next.js",
       "TypeScript",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "AI-powered",
     ],
     githubUrl: "https://github.com/abdellah0l/",
-    demoUrl: "https://bookhive-three.vercel.app/",
+    demoUrl: "https://github.com/abdellah0l/",
     featured: true,
   },
   {
