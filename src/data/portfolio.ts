@@ -23,10 +23,10 @@ export const projects: Project[] = [
     id: "1",
     title: "BookHive",
     description: {
-      en: "still in development",
-      fr: "en cours de développement",
+      en: "An AI-powered book recommendation platform that suggests books based on user preferences and reading history",
+      fr: "Une plateforme de recommandation de livres alimentée par l'IA qui suggère des livres en fonction des préférences et de l'historique de lecture des utilisateurs",
     },
-    image: "",
+    image: bookhiveImage,
     stack: [
       "Next.js",
       "TypeScript",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "AI-powered",
     ],
     githubUrl: "https://github.com/abdellah0l/",
-    demoUrl: "https://github.com/abdellah0l/",
+    demoUrl: "https://bookhive-three.vercel.app/",
     featured: true,
   },
   {
