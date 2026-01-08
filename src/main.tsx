@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import SpiderFavicon from "./data/assets/letter-a.png";
+import { Analytics } from "@vercel/analytics/react";
 
 // Ensure favicon uses the added asset
 const ensureFavicon = () => {
@@ -18,4 +19,9 @@ const ensureFavicon = () => {
 
 ensureFavicon();
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <>
+    <App />
+    <Analytics />
+  </>
+);
