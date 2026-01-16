@@ -158,6 +158,10 @@ const About = () => {
                       alt: "Better-Auth",
                       extra: "bg-white rounded p-1",
                     },
+                    {
+                      customSrc: "https://cdn.simpleicons.org/trpc",
+                      alt: "tRPC",
+                    },
                   ].map((icon, i) => (
                     <motion.div
                       key={i}

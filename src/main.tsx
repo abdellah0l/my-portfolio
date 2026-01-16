@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
-import SpiderFavicon from "./data/assets/letter-a.png";
+import Letter from "./data/assets/letter-a.png";
 import { Analytics } from "@vercel/analytics/react";
 
 // Ensure favicon uses the added asset
@@ -14,7 +14,7 @@ const ensureFavicon = () => {
     head.appendChild(link);
   }
   link.type = "image/png";
-  link.href = SpiderFavicon;
+  link.href = Letter;
 };
 
 ensureFavicon();
