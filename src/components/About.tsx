@@ -103,7 +103,6 @@ const About = () => {
                   className="grid grid-cols-3 sm:flex sm:flex-wrap gap-4 sm:gap-5 justify-center lg:justify-start"
                 >
                   {[
-                    { src: "c/c-original.svg", alt: "C" },
                     { src: "python/python-original.svg", alt: "Python" },
                     {
                       src: "javascript/javascript-original.svg",
@@ -137,8 +136,6 @@ const About = () => {
                     { src: "mysql/mysql-original.svg", alt: "MySQL" },
                     { src: "php/php-original.svg", alt: "PHP" },
                     { src: "java/java-original.svg", alt: "Java" },
-                    { src: "numpy/numpy-original.svg", alt: "NumPy" },
-                    { src: "pandas/pandas-original.svg", alt: "Pandas" },
                     { src: "git/git-original.svg", alt: "Git" },
                     {
                       src: "github/github-original.svg",

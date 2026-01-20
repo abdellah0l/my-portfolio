@@ -34,6 +34,7 @@ export const projects: Project[] = [
       "Drizzle ORM",
       "Better-Auth",
       "AI-powered",
+      "tRPC"
     ],
     githubUrl: "https://github.com/abdellah0l/",
     demoUrl: "https://bookhive-three.vercel.app/",
@@ -91,8 +92,8 @@ export const journeyEvents: JourneyEvent[] = [
   {
     id: "1",
     title: {
-      en: "Fullstack Developer Freelancer",
-      fr: "Développeur Fullstack Freelance",
+      en: "Fullstack Engineer Freelancer",
+      fr: "Ingénieur Fullstack Freelance",
     },
     date: "2025-08",
     description: {
@@ -140,8 +141,8 @@ export const journeyEvents: JourneyEvent[] = [
 
 export const personalInfo = {
   name: "Abdellah Maamra",
-  role: "Full-stack Developer and junior Ai Engineer",
-  bio: "Passionate Full-Stack Developer experienced in building user-centric, high-performance web applications. Specialized in React, TypeScript, and modern web technologies, with a strong focus on design, security, scalability, and optimization.",
+  role: "Full-stack Engineer and junior AI Engineer",
+  bio: "Passionate Full-Stack Engineer experienced in building user-centric, high-performance web applications. Specialized in Next.js, TypeScript, and modern web technologies, with a strong focus on design, security, scalability, maintainability and optimization.",
   email: "abdellahmaamra2005@gmail.com",
   location: "Algeris, Algeria",
   socials: {
