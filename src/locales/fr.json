@@ -1,7 +1,7 @@
 {
   "hero": {
     "greeting": "Bonjour, je suis",
-    "role": "Développeur Full-stack et Ingénieur IA junior",
+    "role": "Ingénieur Full-stack et Ingénieur IA junior",
     "description": "Je conçois des expériences numériques belles et centrées sur l'utilisateur avec des technologies web modernes. Construisons quelque chose d'incroyable ensemble.",
     "viewWork": "Voir mon travail",
     "getInTouch": "Me contacter",
@@ -11,7 +11,7 @@
   "about": {
     "title": "À propos de moi",
     "subtitle": "Passionné par la création d'expériences numériques",
-    "bio": "Développeur Full-Stack passionné, expérimenté dans la création d'applications web performantes et centrées sur l'utilisateur. Spécialisé en React, TypeScript et les technologies web modernes, avec un fort accent sur le design, la sécurité, l'évolutivité et l'optimisation.",
+    "bio": "Ingénieur Full-Stack passionné, expérimenté dans la création d'applications web performantes et centrées sur l'utilisateur. Spécialisé en Next.js, TypeScript et les technologies web modernes, avec un fort accent sur le design, la sécurité, l'évolutivité, la maintenabilité et l'optimisation.",
     "technologies": "Technologies avec lesquelles je travaille"
   },
   "projects": {

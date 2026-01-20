@@ -1,7 +1,7 @@
 {
   "hero": {
     "greeting": "Hello, I'm",
-    "role": "Full-stack Developer and junior Ai Engineer",
+    "role": "Full-stack Engineer and junior AI Engineer",
     "description": "I craft beautiful, user-centric digital experiences with modern web technologies. Let's build something amazing together.",
     "viewWork": "View My Work",
     "getInTouch": "Get In Touch",
@@ -11,7 +11,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "Passionate about creating digital experiences",
-    "bio": "Passionate Full-Stack Developer experienced in building user-centric, high-performance web applications. Specialized in React, TypeScript, and modern web technologies, with a strong focus on design, security, scalability, and optimization.",
+    "bio": "Passionate Full-Stack Engineer experienced in building user-centric, high-performance web applications. Specialized in Next.js, TypeScript, and modern web technologies, with a strong focus on design, security, scalability, maintainability, and optimization.",
     "technologies": "Technologies I work with"
   },
   "projects": {

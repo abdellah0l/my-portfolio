@@ -60,7 +60,7 @@ const Hero = () => {
             >
               <img
                 src={Ichigo}
-                alt="Black Spider-Man"
+                alt="ichigo"
                 className="w-full h-auto object-contain drop-shadow-2xl"
               />
             </motion.div>
