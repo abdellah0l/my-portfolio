@@ -34,7 +34,8 @@ export const projects: Project[] = [
       "Drizzle ORM",
       "Better-Auth",
       "AI-powered",
-      "tRPC"
+      "tRPC",
+      "Arcjet"
     ],
     githubUrl: "https://github.com/abdellah0l/",
     demoUrl: "https://bookhive-three.vercel.app/",
@@ -64,7 +65,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/abdellah0l/My-AI-journey",
     demoUrl: "https://my-ai-journey-abdellah.vercel.app/",
-    featured: true,
+    featured: false,
   },
   {
     id: "4",
@@ -84,7 +85,7 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/abdellah0l/my-top-fav-characters-",
     demoUrl: "https://top10favcharacters.web.app/",
-    featured: true,
+    featured: false,
   },
 ];
 
